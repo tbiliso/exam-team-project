@@ -89,6 +89,9 @@ main {
 }
 main .main-hdr {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
 }
 main .main-hdr h1 {
   font-size: 4rem;
@@ -124,6 +127,37 @@ main .main-hdr .main-hdr-btn-sec .main-hdr-btn-play .main-hdr-btn-play-icon {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+main .hero-poster-div {
+  width: 21.757rem;
+  height: 17.542rem;
+  border-radius: 0.86rem;
+  background-color: #E8DB84;
+  position: relative;
+  margin-left: auto;
+}
+main .hero-poster-div .hero-sec {
+  margin-top: 4.98rem;
+}
+main .hero-poster-div .hero-sec .hero-card-sec {
+  display: flex;
+  flex-direction: column;
+  gap: 0.516rem;
+  position: absolute;
+  left: 60px;
+}
+main .hero-poster-div .hero-sec .hero-card-sec .card {
+  width: 6.149rem;
+  height: 4.558rem;
+  border-radius: 0.6rem;
+  background-color: #FFFFFF;
+}
+main .hero-poster-div .hero-sec img {
+  position: absolute;
+  top: -25px;
+  left: 3rem;
+  width: 18.1rem;
+  height: 20.036rem;
 }
 
 /*# sourceMappingURL=style.css.map */

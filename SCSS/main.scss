@@ -3,45 +3,58 @@
 @use './base/_reset.scss' as *;
 @use './base/typography' as *;
 
-body{
+body {
     max-width: 60rem;
 }
-header{
-  padding: 2rem 2.4rem;
-    .hdr{
+
+header {
+    padding: 2rem 2.4rem;
+
+    .hdr {
         @include flex;
-        .hdr-action{
+
+        .hdr-action {
             @include flex;
             gap: 3.6rem;
         }
     }
 }
 
-main{
+main {
     padding: 2rem 2.4rem;
-    .main-hdr{
+
+    .main-hdr {
         text-align: center;
-        h1{
+        display: flex;
+        flex-direction: column;
+        gap: 1.4rem;
+
+        h1 {
             font-size: $section-title-text-size;
             color: $mobile-title;
         }
-        p{
+
+        p {
             color: $main-text-color;
             font-size: $medium-text-size;
             font-weight: 400;
-            
+
         }
-        .main-hdr-btn-sec{
+
+        .main-hdr-btn-sec {
             @include flex;
             justify-content: space-around;
-            button{
+
+            button {
                 @include btn;
             }
-            .main-hdr-btn-play{
+
+            .main-hdr-btn-play {
                 display: flex;
                 align-items: center;
                 gap: 0.8rem;
-                .main-hdr-btn-play-icon{
+
+                .main-hdr-btn-play-icon {
                     width: 3.6rem;
                     height: 3.6rem;
                     border-radius: 50%;
@@ -53,4 +66,41 @@ main{
             }
         }
     }
+
+    
+
+        .hero-poster-div {
+            width: 21.757rem;
+            height: 17.542rem;
+            
+            border-radius: 0.86rem;
+            background-color: $section-bg-color;
+            position: relative;
+            margin-left: auto;
+            .hero-sec {
+        margin-top: 4.98rem;
+        .hero-card-sec{
+            display: flex;
+                flex-direction: column;
+                gap: 0.516rem;
+                position: absolute;
+                left: 60px;
+            .card{
+                width: 6.149rem;
+                height: 4.558rem;
+                border-radius: 0.6rem;
+                background-color: $main-light-color;
+                
+            }
+        }
+            img {
+                position: absolute;
+                top: -25px;
+                left: 3rem;
+                width: 18.10rem;
+                height: 20.036rem;
+            }
+        }
+    }
+
 }
