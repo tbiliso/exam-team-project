@@ -67,6 +67,10 @@ body {
   font-size: 1.6rem;
 }
 
+body {
+  max-width: 60rem;
+}
+
 header {
   padding: 2rem 2.4rem;
 }
@@ -78,6 +82,48 @@ header .hdr .hdr-action {
   display: flex;
   justify-content: space-between;
   gap: 3.6rem;
+}
+
+main {
+  padding: 2rem 2.4rem;
+}
+main .main-hdr {
+  text-align: center;
+}
+main .main-hdr h1 {
+  font-size: 4rem;
+  color: #183B56;
+}
+main .main-hdr p {
+  color: #000000;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+main .main-hdr .main-hdr-btn-sec {
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-around;
+}
+main .main-hdr .main-hdr-btn-sec button {
+  background-color: #052A44;
+  padding: 0.8rem 1.2rem;
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  border-radius: 0.8rem;
+}
+main .main-hdr .main-hdr-btn-sec .main-hdr-btn-play {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+main .main-hdr .main-hdr-btn-sec .main-hdr-btn-play .main-hdr-btn-play-icon {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  box-shadow: 2px -2px 38px 0px rgba(0, 0, 0, 0.0784313725);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

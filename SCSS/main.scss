@@ -3,16 +3,54 @@
 @use './base/_reset.scss' as *;
 @use './base/typography' as *;
 
-
+body{
+    max-width: 60rem;
+}
 header{
   padding: 2rem 2.4rem;
     .hdr{
-        
-      
         @include flex;
         .hdr-action{
             @include flex;
             gap: 3.6rem;
+        }
+    }
+}
+
+main{
+    padding: 2rem 2.4rem;
+    .main-hdr{
+        text-align: center;
+        h1{
+            font-size: $section-title-text-size;
+            color: $mobile-title;
+        }
+        p{
+            color: $main-text-color;
+            font-size: $medium-text-size;
+            font-weight: 400;
+            
+        }
+        .main-hdr-btn-sec{
+            @include flex;
+            justify-content: space-around;
+            button{
+                @include btn;
+            }
+            .main-hdr-btn-play{
+                display: flex;
+                align-items: center;
+                gap: 0.8rem;
+                .main-hdr-btn-play-icon{
+                    width: 3.6rem;
+                    height: 3.6rem;
+                    border-radius: 50%;
+                    box-shadow: 2px -2px 38px 0px #00000014;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
         }
     }
 }
