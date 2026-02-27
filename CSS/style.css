@@ -144,13 +144,46 @@ main .hero-poster-div .hero-sec .hero-card-sec {
   flex-direction: column;
   gap: 0.516rem;
   position: absolute;
-  left: 60px;
+  left: -3rem;
+  top: 1rem;
 }
 main .hero-poster-div .hero-sec .hero-card-sec .card {
-  width: 6.149rem;
-  height: 4.558rem;
+  padding: 0.733rem 0.88rem;
+  justify-content: center;
+  align-items: center;
   border-radius: 0.6rem;
   background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  box-shadow: 0.78px 1.55px 14.76px 0px rgba(0, 0, 0, 0.0784313725);
+}
+main .hero-poster-div .hero-sec .hero-card-sec .card h2 {
+  font-weight: 700;
+  font-size: 0.554rem;
+}
+main .hero-poster-div .hero-sec .hero-card-sec .card p {
+  font-weight: 350;
+  font-size: 0.443rem;
+}
+main .hero-poster-div .hero-sec .hero-card-sec .card img {
+  width: 3.9rem;
+  height: 0.97rem;
+  position: static;
+}
+main .hero-poster-div .hero-sec .hero-card-sec .card .oval {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.114rem;
+  height: 1.114rem;
+  border-radius: 50%;
+  background-color: #052A44;
+}
+main .hero-poster-div .hero-sec .hero-card-sec .card .oval p {
+  font-size: 0.7rem;
+  color: white;
+  font-weight: 900;
 }
 main .hero-poster-div .hero-sec img {
   position: absolute;
