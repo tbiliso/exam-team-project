@@ -78,10 +78,42 @@ header .hdr {
   display: flex;
   justify-content: space-between;
 }
+header .hdr img {
+  height: 2.4rem;
+}
 header .hdr .hdr-action {
   display: flex;
   justify-content: space-between;
   gap: 3.6rem;
+}
+header .hdr .hdr-action .dropdown {
+  width: 100%;
+  display: block;
+  text-decoration: none;
+}
+header .hdr .hdr-action .dropdown img {
+  width: 2.4rem;
+}
+header .hdr .hdr-action .dropdown .content {
+  display: none;
+  position: absolute;
+  padding: 0.8rem 5.95rem 0;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+header .hdr .hdr-action .dropdown .content li {
+  margin: 0.8;
+}
+header .hdr .hdr-action .dropdown .content .nav-btn-item button {
+  background-color: #052A44;
+  padding: 0.8rem 1.2rem;
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  border-radius: 0.8rem;
+}
+header .hdr .hdr-action .dropdown:hover .content {
+  display: block;
+  justify-content: center;
+  align-items: center;
 }
 
 main {

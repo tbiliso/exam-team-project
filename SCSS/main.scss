@@ -12,10 +12,41 @@ header {
 
     .hdr {
         @include flex;
-
+        img{
+            height: 2.4rem;
+        }
         .hdr-action {
             @include flex;
             gap: 3.6rem;
+            .dropdown{
+                width: 100%;
+                display: block;
+                text-decoration: none;
+                img{
+                    width: 2.4rem;
+                    // height: 2.4rem;
+                }
+                .content{
+                    display: none;
+                    position: absolute;
+                    padding: 0.8rem 5.95rem 0;
+                    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+                    li{
+                        margin: 0.8;
+                    }
+                    .nav-btn-item{
+                        button{
+                            @include btn;
+                        }
+                    }
+                }
+                &:hover .content{
+                    display: block;
+                    justify-content: center;
+                    align-items: center;
+
+                }
+            }
         }
     }
 }
