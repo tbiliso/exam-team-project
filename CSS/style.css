@@ -68,90 +68,107 @@ body {
 }
 
 body {
-  max-width: 60rem;
+  max-width: 35rem;
+  margin: 0 auto;
 }
-
-header {
+body .mode-chkbox {
+  display: none;
+}
+body .mode-chkbox:checked ~ header {
+  background-color: #1E2A39;
+}
+body .mode-chkbox:checked ~ .container {
+  background-color: #1E2A39;
+}
+body .mode-chkbox:checked ~ .container h1 {
+  color: #FFFFFF;
+}
+body .mode-chkbox:checked ~ .container p {
+  color: #FFFFFF;
+}
+body .mode-chkbox:checked ~ footer {
+  background-color: #1E2A39;
+}
+body header {
   padding: 2rem 2.4rem;
 }
-header .hdr {
+body header .hdr {
   display: flex;
   justify-content: space-between;
 }
-header .hdr img {
+body header .hdr img {
   height: 2.4rem;
 }
-header .hdr .hdr-action {
+body header .hdr .hdr-action {
   display: flex;
   justify-content: space-between;
   gap: 3.6rem;
 }
-header .hdr .hdr-action .dropdown {
+body header .hdr .hdr-action .dropdown {
   width: 100%;
   display: block;
   text-decoration: none;
 }
-header .hdr .hdr-action .dropdown img {
+body header .hdr .hdr-action .dropdown img {
   width: 2.4rem;
 }
-header .hdr .hdr-action .dropdown .content {
+body header .hdr .hdr-action .dropdown .content {
   display: none;
   position: absolute;
   padding: 0.8rem 5.95rem 0;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
-header .hdr .hdr-action .dropdown .content li {
+body header .hdr .hdr-action .dropdown .content li {
   margin: 0.8;
 }
-header .hdr .hdr-action .dropdown .content .nav-btn-item button {
+body header .hdr .hdr-action .dropdown .content .nav-btn-item button {
   background-color: #052A44;
   padding: 0.8rem 1.2rem;
   color: #FFFFFF;
   font-size: 1.4rem;
   border-radius: 0.8rem;
 }
-header .hdr .hdr-action .dropdown:hover .content {
+body header .hdr .hdr-action .dropdown:hover .content {
   display: block;
   justify-content: center;
   align-items: center;
 }
-
-main {
+body main {
   padding: 2rem 2.4rem;
 }
-main .main-hdr {
+body main .main-hdr {
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
 }
-main .main-hdr h1 {
+body main .main-hdr h1 {
   font-size: 4rem;
   color: #183B56;
 }
-main .main-hdr p {
+body main .main-hdr p {
   color: #000000;
   font-size: 1.6rem;
   font-weight: 400;
 }
-main .main-hdr .main-hdr-btn-sec {
+body main .main-hdr .main-hdr-btn-sec {
   display: flex;
   justify-content: space-between;
   justify-content: space-around;
 }
-main .main-hdr .main-hdr-btn-sec button {
+body main .main-hdr .main-hdr-btn-sec button {
   background-color: #052A44;
   padding: 0.8rem 1.2rem;
   color: #FFFFFF;
   font-size: 1.4rem;
   border-radius: 0.8rem;
 }
-main .main-hdr .main-hdr-btn-sec .main-hdr-btn-play {
+body main .main-hdr .main-hdr-btn-sec .main-hdr-btn-play {
   display: flex;
   align-items: center;
   gap: 0.8rem;
 }
-main .main-hdr .main-hdr-btn-sec .main-hdr-btn-play .main-hdr-btn-play-icon {
+body main .main-hdr .main-hdr-btn-sec .main-hdr-btn-play .main-hdr-btn-play-icon {
   width: 3.6rem;
   height: 3.6rem;
   border-radius: 50%;
@@ -160,7 +177,7 @@ main .main-hdr .main-hdr-btn-sec .main-hdr-btn-play .main-hdr-btn-play-icon {
   justify-content: center;
   align-items: center;
 }
-main .hero-poster-div {
+body main .hero-poster-div {
   width: 21.757rem;
   height: 17.542rem;
   border-radius: 0.86rem;
@@ -168,10 +185,10 @@ main .hero-poster-div {
   position: relative;
   margin-left: auto;
 }
-main .hero-poster-div .hero-sec {
+body main .hero-poster-div .hero-sec {
   margin-top: 4.98rem;
 }
-main .hero-poster-div .hero-sec .hero-card-sec {
+body main .hero-poster-div .hero-sec .hero-card-sec {
   display: flex;
   flex-direction: column;
   gap: 0.516rem;
@@ -179,7 +196,7 @@ main .hero-poster-div .hero-sec .hero-card-sec {
   left: -3rem;
   top: 1rem;
 }
-main .hero-poster-div .hero-sec .hero-card-sec .card {
+body main .hero-poster-div .hero-sec .hero-card-sec .card {
   padding: 0.733rem 0.88rem;
   justify-content: center;
   align-items: center;
@@ -190,20 +207,20 @@ main .hero-poster-div .hero-sec .hero-card-sec .card {
   gap: 0.4rem;
   box-shadow: 0.78px 1.55px 14.76px 0px rgba(0, 0, 0, 0.0784313725);
 }
-main .hero-poster-div .hero-sec .hero-card-sec .card h2 {
+body main .hero-poster-div .hero-sec .hero-card-sec .card h2 {
   font-weight: 700;
   font-size: 0.554rem;
 }
-main .hero-poster-div .hero-sec .hero-card-sec .card p {
+body main .hero-poster-div .hero-sec .hero-card-sec .card p {
   font-weight: 350;
   font-size: 0.443rem;
 }
-main .hero-poster-div .hero-sec .hero-card-sec .card img {
+body main .hero-poster-div .hero-sec .hero-card-sec .card img {
   width: 3.9rem;
   height: 0.97rem;
   position: static;
 }
-main .hero-poster-div .hero-sec .hero-card-sec .card .oval {
+body main .hero-poster-div .hero-sec .hero-card-sec .card .oval {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -212,17 +229,24 @@ main .hero-poster-div .hero-sec .hero-card-sec .card .oval {
   border-radius: 50%;
   background-color: #052A44;
 }
-main .hero-poster-div .hero-sec .hero-card-sec .card .oval p {
+body main .hero-poster-div .hero-sec .hero-card-sec .card .oval p {
   font-size: 0.7rem;
   color: white;
   font-weight: 900;
 }
-main .hero-poster-div .hero-sec img {
+body main .hero-poster-div .hero-sec img {
   position: absolute;
   top: -25px;
   left: 3rem;
   width: 18.1rem;
   height: 20.036rem;
+}
+@media screen and (min-width: 60.1rem) {
+  body body header {
+    padding: 5rem 10rem;
+    background-color: #052A44;
+    margin: 0 auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
