@@ -7,3 +7,13 @@
     font-size: variables.$medium-text-size;
     border-radius: variables.$btn-radius;
 }
+@mixin flex-box-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@mixin flex-box-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

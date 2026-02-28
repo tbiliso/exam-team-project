@@ -79,4 +79,140 @@ body {
   font-size: 1.6rem;
 }
 
+.aboutus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.6rem auto;
+  width: 100%;
+  background-color: #ffffff;
+}
+@media (min-width: 600px) {
+  .aboutus .aboutus-wrapper {
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+}
+.aboutus .aboutus-wrapper {
+  padding: 2.4rem;
+  text-align: center;
+}
+.aboutus .aboutus-wrapper .aboutus-content {
+  margin-bottom: 4rem;
+}
+.aboutus .aboutus-wrapper .aboutus-content .aboutus-title {
+  margin-bottom: 2.6rem;
+  color: #183B56;
+  font-size: 2.8rem;
+}
+@media (min-width: 600px) {
+  .aboutus .aboutus-wrapper .aboutus-content .aboutus-title {
+    font-size: 4.2rem;
+    color: #000000;
+    font-weight: 600;
+  }
+}
+.aboutus .aboutus-wrapper .aboutus-content .aboutus-text p {
+  font-size: 1.6rem;
+  color: #000000;
+}
+.aboutus .aboutus-wrapper .about-us-card-wrapper {
+  margin-top: 2.6rem;
+  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 600px) {
+  .aboutus .aboutus-wrapper .about-us-card-wrapper {
+    flex-direction: row;
+    position: relative;
+  }
+}
+.aboutus .aboutus-wrapper .about-us-card-wrapper .card-content {
+  position: relative;
+  box-shadow: 1.42px 2.85px 27.04px 0px rgba(0, 0, 0, 0.0784313725);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem;
+  line-height: 4rem;
+  align-items: center;
+  border-radius: 1.6rem;
+  background-color: #ffffff;
+}
+@media (min-width: 600px) {
+  .aboutus .aboutus-wrapper .about-us-card-wrapper .card-content {
+    width: 30%;
+    margin: 4rem 0;
+    position: relative;
+    z-index: 4;
+  }
+}
+.aboutus .aboutus-wrapper .about-us-card-wrapper .card-content .card-icon {
+  width: 5rem;
+  height: 5rem;
+  background-color: #052a44;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-50%);
+  position: absolute;
+  top: 0;
+}
+.aboutus .aboutus-wrapper .about-us-card-wrapper .card-content .card-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.aboutus .aboutus-wrapper .about-us-card-wrapper .card-content .card-text {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.aboutus .aboutus-wrapper .about-us-card-wrapper .circle {
+  display: none;
+}
+@media (min-width: 600px) {
+  .aboutus .aboutus-wrapper .about-us-card-wrapper .circle {
+    display: flex;
+    border-radius: 50%;
+    border: 5.96px solid #052A44;
+    width: 129px;
+    height: 129px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-20%, 50%);
+    z-index: 1;
+  }
+}
+.aboutus .aboutus-wrapper .btn-mobile {
+  background-color: #052a44;
+  padding: 1.5rem 4.3rem;
+  color: #ffffff;
+  font-size: 1.8rem;
+  border-radius: 0.8rem;
+  margin-top: 2rem;
+}
+@media (min-width: 600px) {
+  .aboutus .aboutus-wrapper .btn-mobile {
+    display: none;
+  }
+}
+.aboutus .aboutus-wrapper .btn {
+  background-color: #052a44;
+  padding: 1.5rem 4.3rem;
+  color: #ffffff;
+  font-size: 1.8rem;
+  border-radius: 0.8rem;
+  margin-top: 2rem;
+  display: none;
+}
+@media (min-width: 600px) {
+  .aboutus .aboutus-wrapper .btn {
+    display: flex;
+    margin: auto;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
