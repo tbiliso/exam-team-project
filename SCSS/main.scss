@@ -16,7 +16,31 @@ body {
             // თუ HTML-ში გაქვს <header> ტეგი
             ~header {
                 background-color: $dark-bg;
-
+                .hdr {
+                    .logo{
+                        display: none;
+                    }
+                    .logodark{
+                        display: block;
+                    }
+                    .hdr-action{
+                        .switch-label{
+                            .dark{
+                                display: none;
+                            }
+                            .light{
+                                display: block;
+                            }
+                        }
+                        .dropdown{
+                            .lines{
+                                .line{
+                                    background-color: $main-light-color;
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
 
@@ -51,9 +75,12 @@ body {
         .hdr {
             @include flex;
 
-            .logo {
+            .logo, .logodark {
                 height: 2.4rem;
 
+            }
+            .logodark{
+                display: none;
             }
 
             .hdr-action {
@@ -68,12 +95,15 @@ body {
     height: 2.4rem; 
     width: 5rem; 
     cursor: pointer;
-
+    
     img {
         // აქ მიეცი საშუალება სურათს, რომ სრულად შეავსოს ლეიბლი
         width: 100% !important; 
         height: 100% !important;
         object-fit: contain; // ეს დაიცავს სურათს გაწელვისგან
+    }
+    .light{
+        display: none;
     }
 }
 

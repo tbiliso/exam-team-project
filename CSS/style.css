@@ -77,6 +77,21 @@ body .mode-chkbox {
 body .mode-chkbox:checked ~ header {
   background-color: #1E2A39;
 }
+body .mode-chkbox:checked ~ header .hdr .logo {
+  display: none;
+}
+body .mode-chkbox:checked ~ header .hdr .logodark {
+  display: block;
+}
+body .mode-chkbox:checked ~ header .hdr .hdr-action .switch-label .dark {
+  display: none;
+}
+body .mode-chkbox:checked ~ header .hdr .hdr-action .switch-label .light {
+  display: block;
+}
+body .mode-chkbox:checked ~ header .hdr .hdr-action .dropdown .lines .line {
+  background-color: #FFFFFF;
+}
 body .mode-chkbox:checked ~ .container {
   background-color: #1E2A39;
 }
@@ -104,8 +119,11 @@ body header .hdr {
   justify-content: space-between;
   align-items: center;
 }
-body header .hdr .logo {
+body header .hdr .logo, body header .hdr .logodark {
   height: 2.4rem;
+}
+body header .hdr .logodark {
+  display: none;
 }
 body header .hdr .hdr-action {
   display: flex;
@@ -125,6 +143,9 @@ body header .hdr .hdr-action .switch-label img {
   width: 100% !important;
   height: 100% !important;
   object-fit: contain;
+}
+body header .hdr .hdr-action .switch-label .light {
+  display: none;
 }
 body header .hdr .hdr-action .dropdown {
   width: 100%;
