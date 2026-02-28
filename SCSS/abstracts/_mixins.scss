@@ -14,3 +14,10 @@
     
 }
 
+@mixin btn-dark-mode {
+    background-color: $main-light-color;
+    padding: $padding;
+    color: $main-text-color;
+    font-size: $mall-text-size;
+    border-radius: $btn-radius;
+} 

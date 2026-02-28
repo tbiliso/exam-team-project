@@ -29,7 +29,12 @@ body {
 
                 p {
                     color: $main-light-color;
+                }
 
+                .main-hdr-btn-sec{
+                    button{
+                        @include btn-dark-mode;
+                    }
                 }
             }
 
