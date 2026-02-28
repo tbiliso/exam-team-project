@@ -102,22 +102,44 @@ body header {
 body header .hdr {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-body header .hdr img {
+body header .hdr .logo {
   height: 2.4rem;
 }
 body header .hdr .hdr-action {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 3.6rem;
+}
+body header .hdr .hdr-action .switch-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.4rem;
+  width: 5rem;
+  cursor: pointer;
+}
+body header .hdr .hdr-action .switch-label img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
 }
 body header .hdr .hdr-action .dropdown {
   width: 100%;
   display: block;
   text-decoration: none;
 }
-body header .hdr .hdr-action .dropdown img {
-  width: 2.4rem;
+body header .hdr .hdr-action .dropdown .lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+body header .hdr .hdr-action .dropdown .lines .line {
+  width: 2.2rem;
+  height: 0.3rem;
+  background-color: #000000;
 }
 body header .hdr .hdr-action .dropdown .content {
   display: none;
@@ -161,6 +183,7 @@ body main .main-hdr p {
 body main .main-hdr .main-hdr-btn-sec {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   justify-content: space-around;
 }
 body main .main-hdr .main-hdr-btn-sec button {

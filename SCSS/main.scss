@@ -19,6 +19,7 @@ body {
 
             }
 
+
             // თუ HTML-ში გაქვს <main class="container">
             ~.container {
                 background-color: $dark-bg;
@@ -31,8 +32,8 @@ body {
                     color: $main-light-color;
                 }
 
-                .main-hdr-btn-sec{
-                    button{
+                .main-hdr-btn-sec {
+                    button {
                         @include btn-dark-mode;
                     }
                 }
@@ -50,22 +51,51 @@ body {
         .hdr {
             @include flex;
 
-            img {
+            .logo {
                 height: 2.4rem;
+
             }
 
             .hdr-action {
                 @include flex;
                 gap: 3.6rem;
 
+                .switch-label {
+    display: inline-flex; // ან inline-block
+    align-items: center;
+    justify-content: center;
+    // აქ გაზარდე ზომა, თუ 2.4 პატარაა, მაგალითად 3.5rem
+    height: 2.4rem; 
+    width: 5rem; 
+    cursor: pointer;
+
+    img {
+        // აქ მიეცი საშუალება სურათს, რომ სრულად შეავსოს ლეიბლი
+        width: 100% !important; 
+        height: 100% !important;
+        object-fit: contain; // ეს დაიცავს სურათს გაწელვისგან
+    }
+}
+
                 .dropdown {
                     width: 100%;
                     display: block;
                     text-decoration: none;
 
-                    img {
-                        width: 2.4rem;
-                        // height: 2.4rem;
+                    // img {
+                    //     width: 2.4rem;
+                    //     height: 2.4rem;
+                    // }
+                    .lines {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.4rem;
+
+                        .line {
+                            width: 2.2rem;
+                            height: 0.3rem;
+                            background-color: $main-text-color;
+                        }
                     }
 
                     .content {
