@@ -227,6 +227,7 @@ body main .main-hdr .main-hdr-btn-sec .main-hdr-btn-play .main-hdr-btn-play-icon
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #FFFFFF;
 }
 body main .hero-poster-div {
   width: 21.757rem;

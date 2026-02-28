@@ -1,0 +1,17 @@
+@use './abstracts/variables' as *;
+@use './abstracts/mixins' as *;
+@use './base/_reset.scss' as *;
+@use './base/typography' as *;
+
+
+@media screen and (min-width: 60rem) {
+    body{
+    min-width: 60rem;
+}
+header{
+    .hdr{
+    display: flex;
+    flex-direction: column;
+}
+}
+}
