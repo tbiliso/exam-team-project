@@ -1,0 +1,141 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+
+.aboutus {
+    @include flex-box-center;
+    margin: 2.6rem auto;
+    
+    width: 100%;
+     background-color: $main-light-color;
+
+
+     @media (min-width: 600px) {
+
+   .aboutus-wrapper {
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+}
+    .aboutus-wrapper {
+        padding: 2.4rem;
+        text-align: center;
+
+        
+
+           .aboutus-content {
+              margin-bottom: 4rem;
+              .aboutus-title{
+                margin-bottom: 2.6rem;
+                color:  #183B56;
+                font-size: 2.8rem;
+
+                 @media (min-width: 600px) {
+                        font-size: $section-title-text-size; // desktop
+                        color: $main-text-color;
+                        font-weight: 600;
+                }
+              }
+
+               .aboutus-text p {
+                    font-size: $mall-text-size;
+                    color: $main-text-color;
+
+                }
+           }
+
+        .about-us-card-wrapper{
+            margin-top: 2.6rem;
+            gap: 50px;
+            @include flex-box-column;
+
+             @media (min-width:600px) {
+              flex-direction: row;
+               position: relative;
+              
+             }
+                .card-content {
+                   position: relative;
+                   box-shadow:  1.42px 2.85px 27.04px 0px #00000014;
+                   @include flex-box-column;
+                   padding: 4rem;
+                   line-height: 4rem;
+                   align-items: center; 
+                   border-radius: $card-radius;   
+                   background-color: $main-light-color;
+                    
+                   @media (min-width: 600px) {
+                     width: 30%;// desktop
+                     margin: 4rem 0;
+                     position: relative;
+                      z-index: 4;
+                      
+                    }  
+                    .card-icon {
+
+                        width: 5rem;
+                        height: 5rem;
+                        background-color: $secondary-bg-color;
+                        border-radius: 50%;
+                        @include flex-box-center;
+                    
+                        transform: translateY( -50%);
+                        position: absolute;
+                        top: 0;
+                        
+                    }
+                    .card-title {
+                        font-size: $medium-text-size;
+                        font-weight: 600;
+
+                       
+                    }
+                    .card-text {
+                        font-size: $mall-text-size;
+                        font-weight: 400;
+                    }
+                }
+            .circle {
+                display: none;
+                @media (min-width:600px) {
+                display: flex;
+                border-radius: 50%;
+                border:  5.96px solid #052A44;
+                width: 129px;
+                height: 129px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transform: translate(-20%, 50% );
+                z-index:1;
+            }   
+        } 
+        }
+
+        .btn-mobile {
+            @include btn ;
+            margin-top: 2rem;
+
+            @media (min-width:600px) {
+                display: none;
+            }
+        }
+        .btn {
+            @include btn ;
+            margin-top: 2rem;
+            display: none;
+
+            @media (min-width:600px) {
+                display: flex;
+                margin: auto;
+            }
+        }
+    }
+
+
+ 
+
+}
+
+
+
