@@ -16,25 +16,33 @@ body {
             // თუ HTML-ში გაქვს <header> ტეგი
             ~header {
                 background-color: $dark-bg;
+
                 .hdr {
-                    .logo{
+
+                    .logo,
+                    .desktopLogo
+                     {
                         display: none;
                     }
-                    .logodark{
+
+                    .logodark {
                         display: block;
                     }
-                    .hdr-action{
-                        .switch-label{
-                            .dark{
+
+                    .hdr-action {
+                        .switch-label {
+                            .dark {
                                 display: none;
                             }
-                            .light{
+
+                            .light {
                                 display: block;
                             }
                         }
-                        .dropdown{
-                            .lines{
-                                .line{
+
+                        .dropdown {
+                            .lines {
+                                .line {
                                     background-color: $main-light-color;
                                 }
                             }
@@ -75,11 +83,13 @@ body {
         .hdr {
             @include flex;
 
-            .logo, .logodark {
+            .logo,
+            .logodark {
                 height: 2.4rem;
 
             }
-            .logodark{
+
+            .logodark {
                 display: none;
             }
 
@@ -88,24 +98,25 @@ body {
                 gap: 3.6rem;
 
                 .switch-label {
-    display: inline-flex; // ან inline-block
-    align-items: center;
-    justify-content: center;
-    // აქ გაზარდე ზომა, თუ 2.4 პატარაა, მაგალითად 3.5rem
-    height: 2.4rem; 
-    width: 5rem; 
-    cursor: pointer;
-    
-    img {
-        // აქ მიეცი საშუალება სურათს, რომ სრულად შეავსოს ლეიბლი
-        width: 100% !important; 
-        height: 100% !important;
-        object-fit: contain; // ეს დაიცავს სურათს გაწელვისგან
-    }
-    .light{
-        display: none;
-    }
-}
+                    display: inline-flex; // ან inline-block
+                    align-items: center;
+                    justify-content: center;
+                    // აქ გაზარდე ზომა, თუ 2.4 პატარაა, მაგალითად 3.5rem
+                    height: 2.4rem;
+                    width: 5rem;
+                    cursor: pointer;
+
+                    img {
+                        // აქ მიეცი საშუალება სურათს, რომ სრულად შეავსოს ლეიბლი
+                        width: 100% !important;
+                        height: 100% !important;
+                        object-fit: contain; // ეს დაიცავს სურათს გაწელვისგან
+                    }
+
+                    .light {
+                        display: none;
+                    }
+                }
 
                 .dropdown {
                     width: 100%;
@@ -286,13 +297,5 @@ body {
     }
 
 
-    @media screen and (min-width:60.1rem) {
-        body {
-            header {
-                padding: 5rem 10rem;
-                background-color: $secondary-bg-color;
-                margin: 0 auto;
-            }
-        }
-    }
+
 }

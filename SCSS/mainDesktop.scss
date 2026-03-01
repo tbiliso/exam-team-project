@@ -4,14 +4,52 @@
 @use './base/typography' as *;
 
 
-@media screen and (min-width: 60rem) {
+// mediaquery always takes default value of html 16px. so we must devide 
+@media screen and (min-width: 90em) {
     body{
-    min-width: 60rem;
-}
-header{
-    .hdr{
+        min-width: 144rem;
+
+   .hdr{
+    background-color: $secondary-bg-color;
+    color: $main-light-color;
     display: flex;
-    flex-direction: column;
-}
+    .logo-sec{
+        .logo, .logodark{
+            display: none;
+        }
+        .desktopLogo{
+            display: block;
+            font-size: 2rem;
+
+        }
+    }
+    .hdr-action{
+        .switch-label{
+            .dark, .light{
+                display: none;
+            }
+            .logodarkDesk{display: inline-block;}
+        }
+
+        .dropdown{
+            display: flex;
+
+                .lines{
+                    display: none !important;
+                }
+                
+            }
+            .content{
+                display: contents !important;
+
+                li{
+                    display: inline-block !important;
+                    gap: 3.5rem;
+                    margin-right: 3.5rem;
+                }
+                
+            }
+    }
+   }
 }
 }
