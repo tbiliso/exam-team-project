@@ -11,16 +11,14 @@
                 display: flex;
                 max-width: 140rem;
                 margin: 0 auto;
-                
             }
-     .our-service-wrapper{
-        @include flex-box-center;
-        background-color:$section-bg-color;
-        margin: 2.6rem ;
-        border-radius:$card-radius;  
-        @media (min-width:600px) {
-                border-radius: $section-radius;
-                
+        .our-service-wrapper{
+            @include flex-box-center;
+            background-color:$section-bg-color;
+            margin: 2.6rem ;
+            border-radius:$card-radius;  
+            @media (min-width:600px) {
+             border-radius: $section-radius;      
             }
         
         .our-service-content{
@@ -31,13 +29,10 @@
                 display: flex;
                 flex-direction: row-reverse;
                 margin:4rem 5.6rem;
-                gap: 8.7rem;
-                
+                gap: 8.7rem;    
             }
             .our-service-text{
-
-                 @media (min-width:600px) {
-                    
+                 @media (min-width:600px) {   
                 }
                
              .our-service-title {
@@ -62,7 +57,7 @@
                 font-size:$mall-text-size ;
                  margin-bottom: 2rem;
                  @media (min-width: 600px) {
-                    width: 70%;
+                    
                     color: $main-text-color;
                     font-size: $medium-text-size;
                     font-weight: 400;
@@ -109,29 +104,16 @@
                z-index: 10;
 
                  @media (min-width:600px) {
-                width: 90%;
-                
-              }
-               
+                    width: 100%;
+                }
                
                .our-service-img-wrapper {
                 display: flex;
                 flex-direction: column;
-                
                 background-color:  #d7d6d699;
-                // background:  linear-gradient(
-                // 90deg,
-                // #e3dccb 0%,
-                // #dcd8cf 40%,
-                // #d5d9de 60%,
-                // #cdddea 100%
-                // );
                  border-radius: 6.4px;
                  position: relative;
-                 
-                //  z-index: 10;
-                 
-                 
+             
                     .our-service-mcicon {
                         display: flex;
                         padding: 8px;
@@ -142,18 +124,30 @@
                             width: 5.56px;
                             height: 5.56px;
                             border-radius: 50%;
+                                @media (min-width:600px) {
+                                    width: 11px;
+                                   height: 11px;
+                                }
                         }
                         .yellow {
                             background-color: #F6C566;
                             width: 5.56px;
                             height: 5.56px;
                             border-radius: 50%;
+                                 @media (min-width:600px) {
+                                    width: 11px;
+                                   height: 11px;
+                                }
                         }
                         .green {
                             background-color: #5BEB7B;
                             width: 5.56px;
                             height: 5.56px;
                             border-radius: 50%;
+                             @media (min-width:600px) {
+                                    width: 11px;
+                                   height: 11px;
+                                }
                         }
                     }
                 .our-service-img-container {

@@ -1,0 +1,190 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.stories {
+    display: none;
+    @media (min-width: 600px) {
+        display: flex;
+        max-width: 140rem;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    .stories-wrapper{
+        @media (min-width:600px) {
+             border-radius: $section-radius;  
+             background-color: $section-bg-color;  
+             padding:2rem;  
+           }
+
+        .stories-content {
+            @media (min-width:600px) {
+                display: flex;
+                flex-direction: row;
+                margin:4rem 5.6rem;
+                gap: 8.7rem;    
+                
+            }
+            .stories-text {
+                .stories-title {
+                        @media (min-width:600px) {
+                        color: $main-text-color;
+                        font-weight: 600;
+                        font-size: $section-title-text-size;
+                        display: flex;
+                        justify-content: flex-start;
+                    }
+                }
+                .stories-subtitle {
+                        @media (min-width: 600px) {
+                        color: $main-text-color;
+                        font-size: $medium-text-size;
+                        font-weight: 400;
+                        margin-bottom: 4rem;   
+                    }
+                }
+                .stories-icon {
+
+                    @media (min-width:600px) {
+                        display: flex;
+                        gap:2rem;
+                        margin: 1.6rem 0;
+                    }
+                    
+                    .stories-circle {
+                             
+                            @media (min-width:600px) {
+                            background-color: $main-light-color;
+                            border-radius: 50%;
+                            width: 5.3rem;
+                            height: 5.3rem;
+                            @include flex-box-center;
+                        }
+                    }
+                    .text {
+                        @media (min-width:600px) {
+                            @include flex-box-center;
+                            font-size: $medium-text-size;
+                        }
+
+                    }
+                }
+            .btn-desktop{
+                    @media (min-width:600px) {
+                        @include btn;
+                        display: flex;
+                        margin-top: 6rem;
+                        
+                    }
+                }
+            }
+        .stories-img {
+            @media (min-width:600px) {
+                 margin-bottom: 6rem;
+               display: flex;
+               justify-content: flex-end;
+               flex-direction: column;
+               position: relative;
+               z-index: 10;
+               width: 100%;
+            }
+            .stories-img-wrapper {
+                @media (min-width:600px) {
+                     display: flex;
+                    flex-direction: column;
+                    
+                    background-color:  #d7d6d699;
+        
+                    border-radius: 6.4px;
+                    position: relative;
+                }
+                .stories-mcicon {
+                    @media (min-width:600px) {
+                        display: flex;
+                        padding: 10px;
+                        gap: 3px;
+                    }
+                    .red {
+                        @media (min-width:600px) {
+                             background:  #EE6767;
+                            width: 11px;
+                            height: 11px;
+                            border-radius: 50%;
+                        }
+                    }
+                    .yellow {
+                        @media (min-width:600px) {
+                            background-color: #F6C566;
+                            width: 11px;
+                            height: 11px;
+                            border-radius: 50%;
+                        }
+                    }
+                    .green {
+                        @media (min-width:600px) {
+                            background-color: #5BEB7B;
+                            width: 11px;
+                            height: 11px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+
+            .stories-img-container {
+                @media (min-width:600px) {
+                   display: flex;
+                   flex-direction: column;
+                   gap: 1rem;
+                   padding: 2rem;
+                }
+                .stories-image{
+                    @media (min-width:600px) {
+                        width: 100%;
+                    }
+                }
+                .img-flex{
+                    @media (min-width:600px) {
+                        display: flex;
+                         justify-content: space-between;
+                            width: 100%;
+                            gap: 1rem;
+                    }
+                .img-left {
+                               
+                    @media (min-width:600px) {
+                    width: 40%;
+                    border-radius: 1.2rem;
+                    }
+                    
+                    
+                }
+                .img-right {
+                    @media (min-width:600px) {
+                         width: 60%;
+                        border-radius: 1.2rem;
+                        
+                    }        
+                }
+                }
+            }
+            .blue-circle {
+                @media (min-width:600px) {
+                    width:19.7rem ;
+                    height: 19.7rem;
+                    border-radius: 50%;
+                    background-color: $secondary-bg-color;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    transform:translate(-20%, 20%) ;
+                    z-index: -2;
+                    opacity: 1;
+                    filter: blur(1%);
+                }
+            }
+        }
+
+        }   
+    }
+    
+}

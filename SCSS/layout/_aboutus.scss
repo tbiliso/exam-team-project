@@ -6,14 +6,14 @@
     @include flex-box-center;
     margin: 2.6rem auto;
     
-     width: 100%;
+    width: 100%;
      background-color: $main-light-color;
 
 
      @media (min-width: 600px) {
 
    .aboutus-wrapper {
-    max-width: 140rem;
+    max-width: 120rem;
     margin: 0 auto;
   }
 }
