@@ -77,13 +77,14 @@ body .mode-chkbox {
 body .mode-chkbox:checked ~ header {
   background-color: #1E2A39;
 }
-body .mode-chkbox:checked ~ header .hdr .logo {
+body .mode-chkbox:checked ~ header .hdr .logo,
+body .mode-chkbox:checked ~ header .hdr .desktopLogo {
   display: none;
 }
 body .mode-chkbox:checked ~ header .hdr .logodark {
   display: block;
 }
-body .mode-chkbox:checked ~ header .hdr .hdr-action .switch-label .dark {
+body .mode-chkbox:checked ~ header .hdr .hdr-action .switch-label .dark, body .mode-chkbox:checked ~ header .hdr .hdr-action .switch-label .lightDesk {
   display: none;
 }
 body .mode-chkbox:checked ~ header .hdr .hdr-action .switch-label .light {
@@ -119,7 +120,8 @@ body header .hdr {
   justify-content: space-between;
   align-items: center;
 }
-body header .hdr .logo, body header .hdr .logodark {
+body header .hdr .logo,
+body header .hdr .logodark {
   height: 2.4rem;
 }
 body header .hdr .logodark {
@@ -144,7 +146,7 @@ body header .hdr .hdr-action .switch-label img {
   height: 100% !important;
   object-fit: contain;
 }
-body header .hdr .hdr-action .switch-label .light {
+body header .hdr .hdr-action .switch-label .light, body header .hdr .hdr-action .switch-label .lightDesk {
   display: none;
 }
 body header .hdr .hdr-action .dropdown {
@@ -169,7 +171,7 @@ body header .hdr .hdr-action .dropdown .content {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 body header .hdr .hdr-action .dropdown .content li {
-  margin: 0.8;
+  margin: 0.8rem;
 }
 body header .hdr .hdr-action .dropdown .content .nav-btn-item button {
   background-color: #052A44;
