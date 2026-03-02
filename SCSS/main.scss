@@ -2,5 +2,377 @@
 @use './abstracts/mixins' as *;
 @use './base/_reset.scss' as *;
 @use './base/typography' as *;
+@use './layout/_aboutus' as *;
+
+body {
+    max-width: 35rem;
+    margin: 0 auto; // ცენტრისთვის
+
+    .mode-chkbox {
+        display: none;
+
+        // როცა ჩეკბოქსი მონიშნულია
+        &:checked {
+
+            // თუ HTML-ში გაქვს <header> ტეგი
+            ~header {
+                background-color: $dark-bg;
+
+                .hdr {
+
+                    .logo,
+                    .desktopLogo {
+                        display: none;
+                    }
+
+                    .logodark {
+                        display: block;
+                    }
+
+                    .hdr-action {
+                        .switch-label {
+                            .dark {
+                                display: none;
+                            }
+
+                            .light {
+                                display: block;
+                            }
+                        }
+
+                        .dropdown {
+                            .lines {
+                                .line {
+                                    background-color: $main-light-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 
 
+            // თუ HTML-ში გაქვს <main class="container">
+            ~.container {
+                background-color: $dark-bg;
+
+                h1 {
+                    color: $main-light-color;
+                }
+
+                p {
+                    color: $main-light-color;
+                }
+
+                .main-hdr-btn-sec {
+                    button {
+                        @include btn-dark-mode;
+                    }
+                }
+            }
+
+            ~footer {
+                background-color: $dark-bg; // დარწმუნდი რომ ეს ცვლადი განსაზღვრულია
+            }
+        }
+    }
+    header {
+        padding: 2rem 2.4rem;
+
+        .hdr {
+            @include flex;
+
+            .logo,
+            .logodark {
+                height: 2.4rem;
+            }
+
+            .logodark {
+                display: none;
+            }
+
+            .hdr-action {
+                @include flex;
+                gap: 3.6rem;
+
+                .switch-label {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 2.4rem;
+                    width: 5rem;
+                    cursor: pointer;
+
+                    img {
+                        width: 100% !important;
+                        height: 100% !important;
+                        object-fit: contain;
+                    }
+
+                    .light {
+                        display: none;
+                    }
+                } // აქ დაიხურა switch-label
+            } // <--- აი ეს ფრჩხილი აკლია შენთან! ეს ხურავს hdr-action-ს
+
+            .dropdown {
+                width: 100%;
+                display: block;
+                text-decoration: none;
+
+                .lines {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.4rem;
+
+                    .line {
+                        width: 2.2rem;
+                        height: 0.3rem;
+                        background-color: $main-text-color;
+                    }
+                }
+
+                .content {
+                    display: none;
+                    position: absolute;
+                    padding: 0.8rem 5.95rem 0;
+                    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+                    li {
+                        margin: 0.8rem;
+                    }
+
+                    .nav-btn-item {
+                        button {
+                            @include btn;
+                        }
+                    }
+                }
+
+                &:hover .content {
+                    display: block;
+                    justify-content: center;
+                    align-items: center;
+                }
+            } // აქ დაიხურა dropdown
+        } // აქ დაიხურა hdr
+    } // აქ დაიხურა header
+
+    // header {
+    //     padding: 2rem 2.4rem;
+
+    //     .hdr {
+    //         @include flex;
+
+    //         .logo,
+    //         .logodark {
+    //             height: 2.4rem;
+
+    //         }
+
+    //         .logodark {
+    //             display: none;
+    //         }
+
+    //         .hdr-action {
+    //             @include flex;
+    //             gap: 3.6rem;
+
+    //             .switch-label {
+    //                 display: inline-flex; // ან inline-block
+    //                 align-items: center;
+    //                 justify-content: center;
+    //                 // აქ გაზარდე ზომა, თუ 2.4 პატარაა, მაგალითად 3.5rem
+    //                 height: 2.4rem;
+    //                 width: 5rem;
+    //                 cursor: pointer;
+
+    //                 img {
+    //                     // აქ მიეცი საშუალება სურათს, რომ სრულად შეავსოს ლეიბლი
+    //                     width: 100% !important;
+    //                     height: 100% !important;
+    //                     object-fit: contain; // ეს დაიცავს სურათს გაწელვისგან
+    //                 }
+
+    //                 .light {
+    //                     display: none;
+    //                 }
+    //             }
+
+    //             .dropdown {
+    //                 width: 100%;
+    //                 display: block;
+    //                 text-decoration: none;
+
+    //                 // img {
+    //                 //     width: 2.4rem;
+    //                 //     height: 2.4rem;
+    //                 // }
+    //                 .lines {
+    //                     display: flex;
+    //                     flex-direction: column;
+    //                     gap: 0.4rem;
+
+    //                     .line {
+    //                         width: 2.2rem;
+    //                         height: 0.3rem;
+    //                         background-color: $main-text-color;
+    //                     }
+    //                 }
+
+    //                 .content {
+    //                     display: none;
+    //                     position: absolute;
+    //                     padding: 0.8rem 5.95rem 0;
+    //                     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+    //                     li {
+    //                         margin: 0.8rem;
+    //                     }
+
+    //                     .nav-btn-item {
+    //                         button {
+    //                             @include btn;
+    //                         }
+    //                     }
+    //                 }
+
+    //                 &:hover .content {
+    //                     display: block;
+    //                     justify-content: center;
+    //                     align-items: center;
+
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+
+    main {
+        padding: 2rem 2.4rem;
+
+        .main-hdr {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+
+            h1 {
+                font-size: $section-title-text-size;
+                color: $mobile-title;
+            }
+
+            p {
+                color: $main-text-color;
+                font-size: $medium-text-size;
+                font-weight: 400;
+
+            }
+
+            .main-hdr-btn-sec {
+                @include flex;
+                justify-content: space-around;
+
+                button {
+                    @include btn;
+                }
+
+                .main-hdr-btn-play {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.8rem;
+
+                    .main-hdr-btn-play-icon {
+                        width: 3.6rem;
+                        height: 3.6rem;
+                        border-radius: 50%;
+                        box-shadow: 2px -2px 38px 0px #00000014;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: $main-light-color;
+                    }
+                }
+            }
+        }
+
+
+
+        .hero-poster-div {
+            width: 21.757rem;
+            height: 17.542rem;
+
+            border-radius: 0.86rem;
+            background-color: $section-bg-color;
+            position: relative;
+            margin-left: auto;
+
+            .hero-sec {
+                margin-top: 4.98rem;
+
+                .hero-card-sec {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.516rem;
+                    position: absolute;
+                    left: -3rem;
+                    top: 1rem;
+
+                    .card {
+                        padding: 0.733rem 0.88rem;
+                        justify-content: center;
+                        align-items: center;
+
+                        border-radius: 0.6rem;
+                        background-color: $main-light-color;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.4rem;
+                        box-shadow: 0.78px 1.55px 14.76px 0px #00000014;
+
+                        h2 {
+                            font-weight: 700;
+                            font-size: 0.554rem;
+                        }
+
+                        p {
+                            font-weight: 350;
+                            font-size: 0.443rem;
+                        }
+
+                        img {
+                            width: 3.9rem;
+                            height: 0.97rem;
+                            position: static;
+                        }
+
+                        .oval {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 1.114rem;
+                            height: 1.114rem;
+                            border-radius: 50%;
+                            background-color: $secondary-bg-color;
+
+                            p {
+                                font-size: 0.7rem;
+                                color: white;
+                                font-weight: 900;
+                            }
+
+                        }
+                    }
+                }
+
+                img {
+                    position: absolute;
+                    top: -25px;
+                    left: 3rem;
+                    width: 18.10rem;
+                    height: 20.036rem;
+                }
+            }
+        }
+    }
+}

@@ -1,9 +1,40 @@
-@use '../abstracts/variables';
+@use '../abstracts/variables' as *;
 
 @mixin btn {
-    background-color: variables.$secondary-bg-color;
-    padding: 1.5rem 4.3rem;
-    color: variables.$main-light-color;
-    font-size: variables.$medium-text-size;
-    border-radius: variables.$btn-radius;
+    background-color: $secondary-bg-color;
+    padding: $padding;
+    color: $main-light-color;
+    font-size: $mall-text-size;
+    border-radius: $btn-radius;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+@mixin btn-dark-mode {
+    background-color: $main-light-color;
+    padding: $padding;
+    color: $main-text-color;
+    font-size: $mall-text-size;
+    border-radius: $btn-radius;
+} 
+//     background-color: variables.$secondary-bg-color;
+//     padding: 1.5rem 4.3rem;
+//     color: variables.$main-light-color;
+//     font-size: variables.$medium-text-size;
+//     border-radius: variables.$btn-radius;
+// }
+@mixin flex-box-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@mixin flex-box-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
