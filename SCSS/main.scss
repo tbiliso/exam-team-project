@@ -21,8 +21,7 @@ body {
                 .hdr {
 
                     .logo,
-                    .desktopLogo
-                     {
+                    .desktopLogo {
                         display: none;
                     }
 
@@ -77,7 +76,6 @@ body {
             }
         }
     }
-
     header {
         padding: 2rem 2.4rem;
 
@@ -87,7 +85,6 @@ body {
             .logo,
             .logodark {
                 height: 2.4rem;
-
             }
 
             .logodark {
@@ -99,74 +96,157 @@ body {
                 gap: 3.6rem;
 
                 .switch-label {
-                    display: inline-flex; // ან inline-block
+                    display: inline-flex;
                     align-items: center;
                     justify-content: center;
-                    // აქ გაზარდე ზომა, თუ 2.4 პატარაა, მაგალითად 3.5rem
                     height: 2.4rem;
                     width: 5rem;
                     cursor: pointer;
 
                     img {
-                        // აქ მიეცი საშუალება სურათს, რომ სრულად შეავსოს ლეიბლი
                         width: 100% !important;
                         height: 100% !important;
-                        object-fit: contain; // ეს დაიცავს სურათს გაწელვისგან
+                        object-fit: contain;
                     }
 
                     .light {
                         display: none;
                     }
+                } // აქ დაიხურა switch-label
+            } // <--- აი ეს ფრჩხილი აკლია შენთან! ეს ხურავს hdr-action-ს
+
+            .dropdown {
+                width: 100%;
+                display: block;
+                text-decoration: none;
+
+                .lines {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.4rem;
+
+                    .line {
+                        width: 2.2rem;
+                        height: 0.3rem;
+                        background-color: $main-text-color;
+                    }
                 }
 
-                .dropdown {
-                    width: 100%;
+                .content {
+                    display: none;
+                    position: absolute;
+                    padding: 0.8rem 5.95rem 0;
+                    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+                    li {
+                        margin: 0.8rem;
+                    }
+
+                    .nav-btn-item {
+                        button {
+                            @include btn;
+                        }
+                    }
+                }
+
+                &:hover .content {
                     display: block;
-                    text-decoration: none;
-
-                    // img {
-                    //     width: 2.4rem;
-                    //     height: 2.4rem;
-                    // }
-                    .lines {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 0.4rem;
-
-                        .line {
-                            width: 2.2rem;
-                            height: 0.3rem;
-                            background-color: $main-text-color;
-                        }
-                    }
-
-                    .content {
-                        display: none;
-                        position: absolute;
-                        padding: 0.8rem 5.95rem 0;
-                        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-
-                        li {
-                            margin: 0.8;
-                        }
-
-                        .nav-btn-item {
-                            button {
-                                @include btn;
-                            }
-                        }
-                    }
-
-                    &:hover .content {
-                        display: block;
-                        justify-content: center;
-                        align-items: center;
-
-                    }
+                    justify-content: center;
+                    align-items: center;
                 }
-            }
-        }
-    }
+            } // აქ დაიხურა dropdown
+        } // აქ დაიხურა hdr
+    } // აქ დაიხურა header
+
+    // header {
+    //     padding: 2rem 2.4rem;
+
+    //     .hdr {
+    //         @include flex;
+
+    //         .logo,
+    //         .logodark {
+    //             height: 2.4rem;
+
+    //         }
+
+    //         .logodark {
+    //             display: none;
+    //         }
+
+    //         .hdr-action {
+    //             @include flex;
+    //             gap: 3.6rem;
+
+    //             .switch-label {
+    //                 display: inline-flex; // ან inline-block
+    //                 align-items: center;
+    //                 justify-content: center;
+    //                 // აქ გაზარდე ზომა, თუ 2.4 პატარაა, მაგალითად 3.5rem
+    //                 height: 2.4rem;
+    //                 width: 5rem;
+    //                 cursor: pointer;
+
+    //                 img {
+    //                     // აქ მიეცი საშუალება სურათს, რომ სრულად შეავსოს ლეიბლი
+    //                     width: 100% !important;
+    //                     height: 100% !important;
+    //                     object-fit: contain; // ეს დაიცავს სურათს გაწელვისგან
+    //                 }
+
+    //                 .light {
+    //                     display: none;
+    //                 }
+    //             }
+
+    //             .dropdown {
+    //                 width: 100%;
+    //                 display: block;
+    //                 text-decoration: none;
+
+    //                 // img {
+    //                 //     width: 2.4rem;
+    //                 //     height: 2.4rem;
+    //                 // }
+    //                 .lines {
+    //                     display: flex;
+    //                     flex-direction: column;
+    //                     gap: 0.4rem;
+
+    //                     .line {
+    //                         width: 2.2rem;
+    //                         height: 0.3rem;
+    //                         background-color: $main-text-color;
+    //                     }
+    //                 }
+
+    //                 .content {
+    //                     display: none;
+    //                     position: absolute;
+    //                     padding: 0.8rem 5.95rem 0;
+    //                     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+    //                     li {
+    //                         margin: 0.8rem;
+    //                     }
+
+    //                     .nav-btn-item {
+    //                         button {
+    //                             @include btn;
+    //                         }
+    //                     }
+    //                 }
+
+    //                 &:hover .content {
+    //                     display: block;
+    //                     justify-content: center;
+    //                     align-items: center;
+
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 
     main {
         padding: 2rem 2.4rem;
@@ -294,9 +374,5 @@ body {
                 }
             }
         }
-
     }
-
-
-
 }
