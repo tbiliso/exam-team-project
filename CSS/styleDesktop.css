@@ -1,0 +1,108 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+}
+
+/* 1. Box sizing წესი ყველა ელემენტისთვის */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. სტანდარტული margin-ების მოცილება */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* 3. სიმაღლის გასწორება HTML და Body-სთვის */
+html,
+body {
+  height: 100%;
+}
+
+/* 4. ტექსტის რენდერინგის გაუმჯობესება */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. სურათების რესპონსივობა */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. სიების სტილის მოცილება (სურვილისამებრ) */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 7. ბმულების ხაზგასმის მოცილება */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 8. ღილაკების სტანდარტული ბორდერების მოცილება */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 90em) {
+  body {
+    min-width: 144rem;
+  }
+  body .hdr {
+    background-color: #052A44;
+    color: #FFFFFF;
+    display: flex;
+  }
+  body .hdr .logo-sec .logo, body .hdr .logo-sec .logodark {
+    display: none;
+  }
+  body .hdr .logo-sec .desktopLogo {
+    display: block;
+    font-size: 2rem;
+  }
+  body .hdr .hdr-action .switch-label .dark, body .hdr .hdr-action .switch-label .light {
+    display: none;
+  }
+  body .hdr .hdr-action .switch-label .logodarkDesk {
+    display: inline-block;
+  }
+  body .hdr .hdr-action .dropdown {
+    display: flex;
+  }
+  body .hdr .hdr-action .dropdown .lines {
+    display: none !important;
+  }
+  body .hdr .hdr-action .content {
+    display: contents !important;
+  }
+  body .hdr .hdr-action .content li {
+    display: inline-block !important;
+    gap: 3.5rem;
+    margin-right: 3.5rem;
+  }
+}
+
+/*# sourceMappingURL=styleDesktop.css.map */
